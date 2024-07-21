@@ -1,0 +1,11 @@
+create database doctor;
+use doctor;
+CREATE TABLE diseases (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    description TEXT,
+    prevention TEXT,
+    medicines TEXT,
+    image MEDIUMBLOB,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

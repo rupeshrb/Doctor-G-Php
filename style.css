@@ -1,0 +1,189 @@
+.container{
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container .preloader{
+  animation: rotate 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+}
+@keyframes rotate {
+  50%{
+    transform: rotate(360deg);
+  }
+  100%{
+    transform: rotate(720deg);
+  }
+}
+.preloader span{
+  position: absolute;
+  display: block;
+  height: 64px;
+  width: 64px;
+  background: #4CAF50;
+  border: 1px solid #4CAF50;
+  border-radius: 100%;
+}
+.preloader span:nth-child(1){
+  transform: translate(-28px, -28px);
+  animation: shape_1 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+}
+@keyframes shape_1 {
+  60%{
+    transform: scale(0.4);
+  }
+}
+.preloader span:nth-child(2){
+  transform: translate(28px, -28px);
+  animation: shape_2 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+}
+@keyframes shape_2 {
+  40%{
+    transform: scale(0.4);
+  }
+}
+.preloader span:nth-child(3){
+  position: relative;
+  border-radius: 0px;
+  transform: scale(0.98) rotate(-45deg);
+  animation: shape_3 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+}
+@keyframes shape_3 {
+  50%{
+    border-radius: 100%;
+    transform: scale(0.5) rotate(-45deg);
+  }
+  100%{
+    transform: scale(0.98) rotate(-45deg);
+  }
+}
+.shadow{
+  position: relative;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  height: 16px;
+  width: 64px;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+  border: 1px solid #d9d9d9;
+  animation: shadow 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+}
+@keyframes shadow {
+  50%{
+    transform: translateX(-50%) scale(0.5);
+    border-color: #f2f2f2;
+  }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #000000;
+    background-image: url('<?php echo $imageURL; ?>');
+    background-size: cover;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .logo {
+    width: 150px;
+    height: auto;
+  }
+
+  .menu {
+    display: flex;
+  }
+
+  .add-disease-button {
+background-color: #4CAF50;
+color: white;
+border: none;
+padding: 10px 20px;
+cursor: pointer;
+text-decoration: none;
+font-weight: bold;
+}
+
+.add-disease-button:hover {
+background-color: #ddff00;
+}
+
+  .content {
+    margin-bottom: 20px;
+  }
+
+  /* Search box styles */
+  .search-container {
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .search-form {
+    display: flex;
+  }
+
+  .search-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .search-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .search-button:hover {
+    background-color: #000000;
+  }
+
+  /* Search results styles */
+  .search-results-container {
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    padding: 20px;
+  }
+
+  .search-result {
+    margin-bottom: 20px;
+  }
+
+  .search-result h2 {
+    margin-top: 0;
+  }
+
+  .search-result p {
+    margin-bottom: 10px;
+  }
+
+  .form-input {
+    margin-bottom: 10px;
+    width: 97%;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .form-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .form-button:hover {
+    background-color: #45a049;
+  }
